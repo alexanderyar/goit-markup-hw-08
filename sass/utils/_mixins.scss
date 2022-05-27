@@ -1,0 +1,11 @@
+
+@mixin logo ($colorLogo) {
+    /* outline: 1px solid tomato; */
+
+    font-family: $logoFont;
+    color: $colorLogo;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+}
