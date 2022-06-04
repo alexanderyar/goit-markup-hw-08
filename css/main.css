@@ -1559,6 +1559,9 @@ input:focus + .modal--svg {
   .cardset__item:nth-child(even) {
     margin-left: 30px;
   }
+  .cardset__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1615,10 +1618,19 @@ input:focus + .modal--svg {
 }
 
 .cardset__desc {
-  padding: 20px 24px 20px 24px;
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
   border-right: 1px solid #ECECEC;
   border-bottom: 1px solid #ECECEC;
   border-left: 1px solid #ECECEC;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .fucking-padding-56px {
+    padding-bottom: 56px;
+  }
 }
 
 .cardset__thumb {
