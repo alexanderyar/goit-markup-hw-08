@@ -7,8 +7,12 @@
 
 .footer-info {
     margin-top: 0px;
-    // display: flex;
+   
     align-items: baseline;
+
+    @media (min-width:1200px) {
+    display: flex;
+    }
 }
 
 .logo--footer {
@@ -21,6 +25,18 @@
     &--web {
             color: $accent-color;
         }
+    
+    @media (min-width:1200px) {
+        text-align: left;
+    }
+}
+
+.footer-tablet-layout {
+    @media (min-width:768px) {
+        display: flex;
+        align-items: baseline;
+    }
+    
 }
 
 .address {
@@ -59,12 +75,29 @@
         font-weight: 400;
     }
 
+         @media (min-width:768px) {
+             padding-left: 76px;
+         }
+         @media (min-width:1200px) {
+             padding-left: 0;
+             margin-bottom: 0;
+             text-align: left;
+         }
 }
 
 .social {
     // margin-left: 70px;
 
     margin-bottom: 60px;
+
+    @media (min-width:768px) {
+            margin-left: 165px;
+        }
+
+    @media (min-width:1200px) {
+        margin-left: 70px;
+        margin-bottom: 0;
+    }
 
     &__subheader--color {
             color: #ffffff;
@@ -111,6 +144,9 @@
 
 .subscribe {
     // margin-left: 93px;
+    @media (min-width:1200px) {
+        margin-left: auto;
+    }
 
     &__subheader--color {
             color: #ffffff;
@@ -118,17 +154,27 @@
         }
 
     &__form {
-        // display: flex;
+
+    // align-content: center;
+        @media (min-width:768px) and (max-width:1199px) {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media (min-width:1200px) {
+            display: flex;
+        } 
        
     }
 
     &__email {
 
-        width: 450px;
+        display: block;
+        
+        max-width: 450px;
         height: 50px;
         margin-bottom: 20px;
 
-        margin-right: 12px;
         padding-top: 15px;
         padding-bottom: 15px;
         padding-left: 16px;
@@ -144,6 +190,17 @@
         border-style: solid;
     
         color: #fff;
+
+        @media (min-width:768px) {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        @media (min-width:1200px) {
+            width: 358px;
+            margin-bottom: 0;
+            margin-right: 12px;
+        }
+
     }
 
     &__email::placeholder {
@@ -152,6 +209,8 @@
 
     &__svg {
         margin-left: 10px;
+
+        
     }
 
 }

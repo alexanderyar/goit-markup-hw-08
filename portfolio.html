@@ -14,34 +14,57 @@
 <!-- header -->
 <header class="page-header">
     <div class="container container--for-nav">
-        <nav class="site-nav">
+
+
+
+        <div class="mobile-header" data-header-hidden>
+
             <a href="./index.html" class="logo--header"><span class="logo--header--web">Web</span>Studio</a>
 
-            <ul class="site-nav__list list">
+            <button class="site-nav__burger " type="button" data-menu-button>
+                <svg width="40" height="40" aria-label="burger menu switcher">
+                    <use class="burger__icon-burger" href="./images/icon.svg#icon-burger"></use>
+                    <use class="burger__icon-close" href="./images/icon.svg#icon-close-burger"></use>
+                </svg>
+            </button>
+        </div>
 
-                <li class="site-nav__item"><a class=" site-nav__link" href="./index.html">Студия</a></li>
-                <li class="site-nav__item"><a class="current site-nav__link" href="./portfolio.html">Портфолио</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
+        <div class="mobile-container" data-menu>
+
+            <nav class="site-nav">
+                <ul class="site-nav__list list">
+
+                    <li class="site-nav__item"><a class=" site-nav__link" href="./index.html">Студия</a></li>
+                    <li class="site-nav__item"><a class="current site-nav__link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <ul class="auth list ">
+                <li class="auth__item">
+                    <a class="auth__email" href="mailto:info@devstudio.com">
+                        <svg class="auth__icon" width="14" height="10">
+                            <use href="./images/icon.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com</a>
+                </li>
+                <li class="auth__item">
+                    <a class="auth__email mobile__tel-style" href="tel:+380961111111">
+                        <svg class="auth__icon" width="10" height="14">
+                            <use href="./images/icon.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11</a>
+                </li>
             </ul>
-        </nav>
 
+            <ul class="mobile-social">
+                <li class="mobile-social__item"> <a class="mobile-social__link" href="">Instagram </a> </li>
+                <li class="mobile-social__item"> <a class="mobile-social__link" href="">Twitter </a> </li>
+                <li class="mobile-social__item"> <a class="mobile-social__link" href="">Facebook </a> </li>
+                <li class="mobile-social__item"> <a class="mobile-social__link" href="">LinkedIn </a> </li>
+            </ul>
 
-        <ul class="auth list ">
-            <li class="auth__item">
-                <a class="auth__email" href="mailto:info@devstudio.com">
-                    <svg class="auth__icon" width="16" height="12">
-                        <use href="./images/icon.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com</a>
-            </li>
-            <li class="auth__item">
-                <a class="auth__email" href="tel:+380961111111">
-                    <svg class="auth__icon" width="10" height="16">
-                        <use href="./images/icon.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11</a>
-            </li>
-        </ul>
+        </div>
 
 
 
@@ -85,8 +108,22 @@
             <li class="cardset__item">
                 <a class="cardset__link" href="">
                    <div class="cardset__thumb">
-                        <img src="./images/portfolio/tehnohryak.jpg" alt="Технокряк" width="370">
-                       <div class="thumb-for-meta">
+                
+
+                <picture>
+                    <source srcset="./images/portfolio/card1-mobile@1x.jpg 1x, ./images/portfolio/card1-mobile@2x.jpg 2x" media="(max-width:767px)" />
+                    <source srcset="./images/portfolio/card1-tablet@1x.jpg 1x, ./images/portfolio/card1-tablet@2x.jpg 2x"
+                        media="(max-width:1199px)" />
+                        
+                        <img srcset="./images/portfolio/card1-desktop@1x.jpg 1x, ./images/portfolio/card1-desktop@2x.jpg 2x" 
+                        src="./images/portfolio/card1-desktop@1x.jpg" alt="Технокряк">
+                    </picture>
+                    
+             
+                       
+                       
+                       
+                        <div class="thumb-for-meta">
                             <p class="meta">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                                 посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -105,7 +142,16 @@
             <li class="cardset__item">
                 <a class="cardset__link" href="">
                     <div class="cardset__thumb">
-                        <img src="./images/portfolio/basketball.jpg" alt="New Orlean vs Golden Star" width="370">
+
+                        <picture>
+                            <source srcset="./images/portfolio/card2-mobile@1x.jpg 1x, ./images/portfolio/card2-mobile@2x.jpg 2x"
+                                media="(max-width:767px)" />
+                                <source srcset="./images/portfolio/card2-tablet@1x.jpg 1x, ./images/portfolio/card2-tablet@2x.jpg 2x"
+                                    media="(max-width:1199px)" />
+                            <img
+                            srcset="./images/portfolio/card2-desktop@1x.jpg 1x, ./images/portfolio/card2-desktop@2x.jpg 2x"
+                             src="./images/portfolio/card2-desktop@1x.jpg" alt="New Orlean vs Golden Star">
+                        </picture>
                         <div class="thumb-for-meta">
                             <p class="meta">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                                 посетителю получить
@@ -127,7 +173,15 @@
                 
                     <a class="cardset__link" href="">
                         <div class="cardset__thumb">
-                            <img src="./images/portfolio/seafood.jpg" alt="Ресторан Seafood" width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card3-mobile@1x.jpg 1x, ./images/portfolio/card3-mobile@2x.jpg 2x"
+                                media="(max-width:767px)" />
+                                <source srcset="./images/portfolio/card3-tablet@1x.jpg 1x, ./images/portfolio/card3-tablet@2x.jpg 2x"
+                                    media="(max-width:1199px)" />
+                            <img
+                            srcset="./images/portfolio/card3-desktop@1x.jpg 1x, ./images/portfolio/card3-desktop@2x.jpg 2x" 
+                            src="./images/portfolio/card3-desktop@1x.jpg" alt="Ресторан Seafood">
+                        </picture>
                             <div class="thumb-for-meta">
                                 <p class="meta">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                                     посетителю получить
@@ -148,7 +202,16 @@
             <li class="cardset__item">
                 <a class="cardset__link" href="">
                     <div class="cardset__thumb">
-                        <img src="./images/portfolio/Prime.jpg" alt="Проект Prime" width="370">
+                       <picture>
+                           
+                            <source srcset="./images/portfolio/card4-mobile@1x.jpg 1x, ./images/portfolio/card4-mobile@2x.jpg 2x"
+                                media="(max-width:767px)" />
+                                <source srcset="./images/portfolio/card4-tablet@1x.jpg 1x, ./images/portfolio/card4-tablet@2x.jpg 2x"
+                                    media="(max-width:1199px)" />
+                            <img 
+                            srcset="./images/portfolio/card4-desktop@1x.jpg 1x, ./images/portfolio/card4-desktop@2x.jpg 2x"
+                            src="./images/portfolio/card4-desktop@1x.jpg" alt="Проект Prime" >
+                       </picture>
                         <div class="thumb-for-meta">
                             <p class="meta">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                                 посетителю получить
@@ -170,7 +233,16 @@
             <li class="cardset__item">
                 <a class="cardset__link" href="">
                     <div class="cardset__thumb">
-                                            <img src="./images/portfolio/Boxes.jpg" alt="Проект Boxes" width="370">
+                                            <picture>
+                                                
+                                                <source srcset="./images/portfolio/card5-mobile@1x.jpg 1x, ./images/portfolio/card5-mobile@2x.jpg 2x"
+                                                    media="(max-width:767px)" />
+                                                    <source srcset="./images/portfolio/card5-tablet@1x.jpg 1x, ./images/portfolio/card5-tablet@2x.jpg 2x"
+                                                        media="(max-width:1199px)" />
+                                                <img 
+                                                srcset="./images/portfolio/card5-desktop@1x.jpg 1x, ./images/portfolio/card5-desktop@2x.jpg 2x"
+                                                src="./images/portfolio/card5-desktop@1x.jpg" alt="Проект Boxes">
+                                            </picture>
                                             <div class="thumb-for-meta">
                                                 <p class="meta">Ресуем функционала и сеит
                                                     посетителю получить
@@ -190,7 +262,15 @@
             <li class="cardset__item">
                 <a class="cardset__link" href="">
                     <div class="cardset__thumb">
-                        <img src="./images/portfolio/Borders.jpg" alt="Inspiration has no Borders" width="370">
+                       <picture>
+                            <source srcset="./images/portfolio/card6-mobile@1x.jpg 1x, ./images/portfolio/card6-mobile@2x.jpg 2x"
+                                media="(max-width:767px)" />
+                                <source srcset="./images/portfolio/card6-tablet@1x.jpg 1x, ./images/portfolio/card6-tablet@2x.jpg 2x"
+                                    media="(max-width:1199px)" />
+                            <img 
+                            srcset="./images/portfolio/card6-desktop@1x.jpg 1x, ./images/portfolio/card6-desktop@2x.jpg 2x"
+                            src="./images/portfolio/card6-desktop@1x.jpg" alt="Inspiration has no Borders" >
+                       </picture>
                         <div class="thumb-for-meta">
                             <p class="meta">Ресурс предлагает и сервисов. Все это позволит
                                 посетителю получить
@@ -209,7 +289,15 @@
             <li class="cardset__item">
                 <a class="cardset__link" href="">
                     <div class="cardset__thumb">
-                        <img src="./images/portfolio/Limited.jpg" alt="Издание Limited Edition" width="370">
+                       <picture>
+                            <source srcset="./images/portfolio/card7-mobile@1x.jpg 1x, ./images/portfolio/card7-mobile@2x.jpg 2x"
+                                media="(max-width:767px)" />
+                                <source srcset="./images/portfolio/card7-tablet@1x.jpg 1x, ./images/portfolio/card7-tablet@2x.jpg 2x"
+                                    media="(max-width:1199px)" />
+                            <img
+                            srcset="./images/portfolio/card7-desktop@1x.jpg 1x, ./images/portfolio/card7-desktop@2x.jpg 2x"
+                            src="./images/portfolio/card7-desktop@1x.jpg" alt="Издание Limited Edition">
+                       </picture>
                         <div class="thumb-for-meta">
                             <p class="meta">Ресурс предлагает компленым уровнем функционала и сервисов. Все это позволит
                                 посетителю получить
@@ -228,7 +316,15 @@
             <li class="cardset__item">
                 <a class="cardset__link" href="">
                     <div class="cardset__thumb">
-                        <img src="./images/portfolio/Lab.jpg" alt="Проект LAB" width="370">
+                        <picture>  
+                            <source srcset="./images/portfolio/card8-mobile@1x.jpg 1x, ./images/portfolio/card8-mobile@2x.jpg 2x"
+                                media="(max-width:767px)" />
+                                <source srcset="./images/portfolio/card8-tablet@1x.jpg 1x, ./images/portfolio/card8-tablet@2x.jpg 2x"
+                                    media="(max-width:1199px)" />
+                            <img 
+                            srcset="./images/portfolio/card8-desktop@1x.jpg 1x, ./images/portfolio/card8-desktop@2x.jpg 2x"
+                            src="./images/portfolio/card8-desktop@1x.jpg" alt="Проект LAB">
+                        </picture>
                         <div class="thumb-for-meta">
                             <p class="meta">Ресурс предлагает комплексные предложения с разла и сервисов. Все это позволит
                                 посетителю получить
@@ -247,8 +343,16 @@
             <li class="cardset__item">
                 <a class="cardset__link" href="">
                     <div class="cardset__thumb">
-                        <img src="./images/portfolio/Business.jpg" alt="Growing Business" width="370">
-                        <div class="thumb-for-meta">
+                        <picture>
+                            <source srcset="./images/portfolio/card9-mobile@1x.jpg 1x, ./images/portfolio/card9-mobile@2x.jpg 2x"
+                                media="(max-width:767px)" />
+                                <source srcset="./images/portfolio/card9-tablet@1x.jpg 1x, ./images/portfolio/card9-tablet@2x.jpg 2x"
+                                    media="(max-width:1199px)" />
+                            <img 
+                            srcset="./images/portfolio/card9-desktop@1x.jpg 1x, ./images/portfolio/card9-desktop@2x.jpg 2x"
+                            src="./images/portfolio/card9-desktop@1x.jpg" alt="Growing Business">
+                            <div class="thumb-for-meta">
+                        </picture>
                             <p class="meta">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                                 посетителю получить
                                 исчерпывающие свем лице.</p>
@@ -349,5 +453,7 @@
 
 
 </footer>
+
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>
