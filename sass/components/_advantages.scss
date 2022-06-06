@@ -87,7 +87,9 @@
     line-height: 1.14;
     text-transform: uppercase;
 
-    text-align: center;
+    @media (max-width:767px) {
+        text-align: center;
+    }
 
     &--text {
             font-size: $mainFont-size;
