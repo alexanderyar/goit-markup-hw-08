@@ -21,16 +21,20 @@
 
             <a href="./index.html" class="logo--header"><span class="logo--header--web">Web</span>Studio</a>
 
-            <button class="site-nav__burger " type="button" data-menu-button>
+            <button class="site-nav__burger js-open-menu" type="button">
                 <svg width="40" height="40" aria-label="burger menu switcher">
                     <use class="burger__icon-burger" href="./images/icon.svg#icon-burger"></use>
-                    <use class="burger__icon-close" href="./images/icon.svg#icon-close-burger"></use>
+
                 </svg>
             </button>
         </div>
 
-        <div class="mobile-container" data-menu>
-
+        <div class="mobile-container js-menu-container">
+            <button class="mobile-menu-close js-close-menu" type="button">
+                <svg width="40" height="40" aria-label="burger menu switcher">
+                    <use class="burger__icon-close" href="./images/icon.svg#icon-close-burger"></use>
+                </svg>
+            </button>
             <nav class="site-nav">
                 <ul class="site-nav__list list">
 
