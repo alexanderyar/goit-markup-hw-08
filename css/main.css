@@ -1775,6 +1775,12 @@ input:focus + .modal--svg {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (max-width: 767px) {
+  .thumb-for-meta {
+    overflow-y: scroll;
+  }
+}
+
 .cardset__link:hover .thumb-for-meta, .cardset__link:focus .thumb-for-meta {
   display: inline-block;
   position: absolute;
