@@ -140,7 +140,7 @@
     
     
     @media (max-width:767px) {
-        margin-bottom: 306px;
+        margin-bottom: 302px;
     }
 
     @media (min-width:768px) {
@@ -393,6 +393,7 @@
     @extend %list;
 
     display: flex;
+    flex-wrap: wrap;
     
     &__link {
 
