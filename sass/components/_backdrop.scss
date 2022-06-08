@@ -242,11 +242,13 @@ input {
 
      margin-left: auto;
      margin-right: auto;
-     display: flex;
+   
 
      align-items: baseline;
     //  padding-left: 39px;
-
+    @media (min-width:480px) {
+        display: flex;
+    }
     
 
      position: relative;
@@ -254,7 +256,7 @@ input {
     input[type=checkbox] {
             width: auto;
             height: auto;
-            display: block;
+            // display: block;
             font-size: $mainFont-size;
             line-height: 1.71;
             letter-spacing: 0.03em;
@@ -290,7 +292,7 @@ input {
      
     //  left: 18px;
     //  top: +50%;
-    top: 2px;
+    top: 0;
     left: 0;
      display: block;
      width: 16px;
@@ -299,6 +301,9 @@ input {
      border-radius: 2px;
      pointer-events: none;
     //  transform: translate(-50%, -50%);
+    @media (min-width:480px) {
+        top:2px
+    }
 
      .checkbox:checked ~ & {
          background-image: url(../images/icon-check.svg);

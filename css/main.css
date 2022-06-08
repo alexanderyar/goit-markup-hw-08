@@ -1485,19 +1485,23 @@ input:focus + .modal--svg {
   padding-left: 20px;
   margin-left: auto;
   margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
   position: relative;
 }
 
+@media (min-width: 480px) {
+  .modal__license-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .modal__license-field input[type=checkbox] {
   width: auto;
   height: auto;
-  display: block;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -1526,7 +1530,7 @@ input:focus + .modal--svg {
 
 .modal__square-uncheked {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
   display: block;
   width: 16px;
@@ -1534,6 +1538,12 @@ input:focus + .modal--svg {
   border: 2px solid #212121;
   border-radius: 2px;
   pointer-events: none;
+}
+
+@media (min-width: 480px) {
+  .modal__square-uncheked {
+    top: 2px;
+  }
 }
 
 .checkbox:checked ~ .modal__square-uncheked {
